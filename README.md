@@ -8,4 +8,5 @@
 - Background: Solid color
 
 ## Requirements
+- Cli-Visualizer
 - Rofi

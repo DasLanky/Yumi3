@@ -5,6 +5,7 @@ import os
 I3_WORKSPACE_DIR = os.path.expanduser('~/.i3/')
 COMPTON_CFG_DIR = os.path.expanduser('~/.config/')
 I3_CFG_DIR = os.path.expanduser('~/.config/i3/')
+VIS_CFG_DIR = os.path.expanduser('~/.config/vis/')
 WALLPAPER_DIR = os.path.expanduser('~/Pictures/')
 
 if not os.path.exists(I3_WORKSPACE_DIR):
@@ -32,6 +33,10 @@ for name in os.listdir(I3_WORKSPACE_DIR):
 # Compton config
 print('Copying compton config to ' + COMPTON_CFG_DIR + 'compton.conf')
 copyfile(os.path.abspath('./.config/compton.conf'), COMPTON_CFG_DIR + 'compton.conf')
+
+# Visualizer config
+print('Copying cli-visualizer config to ' + VIS_CFG_DIR + 'config')
+copyfile(os.path.abspath('./.config/vis/config'), VIS_CFG_DIR + 'config')
 
 # Wallpaper config
 print('Copying wallpaper to ' + WALLPAPER_DIR + 'wallpaper.png')

@@ -5,6 +5,7 @@ import os
 I3_WORKSPACE_DIR = os.path.expanduser('~/.i3/')
 COMPTON_CFG_DIR = os.path.expanduser('~/.config/')
 I3_CFG_DIR = os.path.expanduser('~/.config/i3/')
+VIS_CFG_DIR = os.path.expanduser('~/.config/vis/')
 
 if not os.path.exists(I3_WORKSPACE_DIR):
     print('Creating new directory ' + I3_WORKSPACE_DIR)
@@ -17,6 +18,10 @@ if not os.path.exists(COMPTON_CFG_DIR):
 if not os.path.exists(I3_CFG_DIR):
     print('Creating new directory ' + I3_CFG_DIR)
     os.mkdir(I3_CFG_DIR)
+
+if not os.path.exists(VIS_CFG_DIR):
+    print('Creating new directory ' + VIS_CFG_DIR)
+    os.mkdir(VIS_CFG_DIR)
 
 # i3 config
 print('Copying i3 config from ' + I3_CFG_DIR + ' to ./config/i3/config')
@@ -31,6 +36,10 @@ for name in os.listdir(I3_WORKSPACE_DIR):
 # Compton config
 print('Copying compton config from ' + COMPTON_CFG_DIR + ' to ./.config/compton.conf')
 copyfile(COMPTON_CFG_DIR + 'compton.conf', os.path.abspath('./.config/compton.conf'))
+
+# Visualizer config
+print('Copying cli-visualizer config from ' + VIS_CFG_DIR + ' to ./.config/vis/config')
+copyfile(VIS_CFG_DIR + 'config', os.path.abspath('./.config/vis/config'))
 
 print('Done.')
 
