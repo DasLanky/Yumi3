@@ -40,7 +40,7 @@ floating_modifier Mod1
 # start a terminal
 bindsym Mod1+Return exec terminator
 
-# for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 0
 
 # kill focused window
 bindsym Mod1+Shift+q kill
@@ -214,7 +214,7 @@ client.unfocused        #222222 #222222 #aaaaaa #222222
 client.focused_inactive #222222 #222222 #a9a9a9 #222222
 client.urgent			#4A4A4A #4A4A4A #f7f7f7 #4A4A4A
 
-gaps inner 0
+gaps inner 50
 
 exec_always feh --bg-scale /home/lanky/Pictures/wallpaper.png
 exec_always compton -f --config ~/.config/compton.conf
