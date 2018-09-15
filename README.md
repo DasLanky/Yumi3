@@ -1,2 +1,11 @@
 # Yumi3
-Light theme!
+
+### Terminal: Terminator
+
+
+## Terminator preferences
+- Color theme: Solarized Light / Solarized
+- Background: Solid color
+
+## Requirements
+- Rofi
