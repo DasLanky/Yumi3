@@ -223,10 +223,10 @@ exec i3-msg "workspace Work; append_layout /home/lanky/.i3/workspace.json"
 #assign [class="^Terminator$" instance="^main$"] Work
 #assign [class="^Terminator$" instance="^htop$"] Work
 #assign [class="^Code$" instance="^code$"] Work
-exec i3-msg "workspace Work; exec terminator; exec terminator; exec terminator;"
+exec i3-msg "workspace Work; exec terminator; exec terminator; exec terminator; exec terminator; exec terminator;"
 
 exec i3-msg "workspace Web; append_layout /home/lanky/.i3/workspace2.json"
-exec i3-msg "workspace Web; exec firefox; exec firefox;"
+exec i3-msg "workspace Web; exec firefox; exec firefox; exec firefox;"
 
 exec i3-msg "workspace Chat; append_layout /home/lanky/.i3/workspace3.json"
 
