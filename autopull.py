@@ -6,22 +6,22 @@ I3_WORKSPACE_DIR = os.path.expanduser('~/.i3/')
 COMPTON_CFG_DIR = os.path.expanduser('~/.config/')
 I3_CFG_DIR = os.path.expanduser('~/.config/i3/')
 VIS_CFG_DIR = os.path.expanduser('~/.config/vis/')
+TERM_CFG_DIR = os.path.expanduser('~/.config/terminator/')
 
 if not os.path.exists(I3_WORKSPACE_DIR):
-    print('Creating new directory ' + I3_WORKSPACE_DIR)
-    os.mkdir(I3_WORKSPACE_DIR)
+    print('Directory non-existant: ' + I3_WORKSPACE_DIR)
 
 if not os.path.exists(COMPTON_CFG_DIR):
-    print('Creating new directory ' + COMPTON_CFG_DIR)
-    os.mkdir(COMPTON_CFG_DIR)
+    print('Directory non-existant: ' + COMPTON_CFG_DIR)
 
 if not os.path.exists(I3_CFG_DIR):
-    print('Creating new directory ' + I3_CFG_DIR)
-    os.mkdir(I3_CFG_DIR)
+    print('Directory non-existant: ' + I3_CFG_DIR)
 
 if not os.path.exists(VIS_CFG_DIR):
-    print('Creating new directory ' + VIS_CFG_DIR)
-    os.mkdir(VIS_CFG_DIR)
+    print('Directory non-existant: ' + VIS_CFG_DIR)
+
+if not os.path.exists(TERM_CFG_DIR):
+    print('Directory non-existant: ' + TERM_CFG_DIR)
 
 # i3 config
 print('Copying i3 config from ' + I3_CFG_DIR + ' to ./config/i3/config')
@@ -40,6 +40,10 @@ copyfile(COMPTON_CFG_DIR + 'compton.conf', os.path.abspath('./.config/compton.co
 # Visualizer config
 print('Copying cli-visualizer config from ' + VIS_CFG_DIR + ' to ./.config/vis/config')
 copyfile(VIS_CFG_DIR + 'config', os.path.abspath('./.config/vis/config'))
+
+# Terminator config
+print('Copying terminator config from ' + TERM_CFG_DIR + ' to ./.config/terminator/config')
+copyfile(TERM_CFG_DIR + 'config', os.path.abspath('./.config/terminator/config'))
 
 print('Done.')
 
